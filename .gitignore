@@ -1,29 +1,68 @@
-*.annot
-*.cmo
-*.cma
-*.cmi
-*.a
+# Python-specific ignores
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.whl
+*.so
+*.egg
+venv/
+env/
+.env
+.pytest_cache/
+*.log
+*.csv  # Exclude raw data files unless explicitly included
+
+# OCaml-specific ignores (hypothetical additions)
 *.o
+*.cmo
+*.cmi
 *.cmx
 *.cmxs
-*.cmxa
-
-# ocamlbuild working directory
-_build/
-
-# ocamlbuild targets
+*.a
+*.out
 *.byte
 *.native
+_build/
+*.annot
+*.cmt
+*.cmti
+*.bc
+dune-project  # If using Dune build system
+*.merlin
+*.opam
 
-# oasis generated files
-setup.data
-setup.log
+# Data and temporary files
+data/*.csv  # Exclude raw tick data in data/ folder
+*.bak
+*.swp
+*~
+*.tmp
 
-# Merlin configuring file for Vim and Emacs
-.merlin
+# Dependency management
+node_modules/  # In case of frontend additions
+*.lock
 
-# Dune generated files
-*.install
+# IDE and editor files
+*.idea/
+*.vscode/
+*.sublime-*
+*.DS_Store
 
-# Local OPAM switch
-_opam/
+# Notebooks and outputs
+notebooks/*.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Documentation and build artifacts
+docs/_build/
+*.pdf
+*.md.bak
+
+# Miscellaneous
+*.prof  # Profiling files
+*.dump
+*.pickle
+*.h5
